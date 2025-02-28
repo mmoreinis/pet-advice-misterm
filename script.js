@@ -1,17 +1,22 @@
 function petRodent(){
     var pet = "";
     var cute = confirm("Do you wanna cute pet?");
-    if (cute==true) pet="hamster";
-    else pet="rat"; 
+    if (cute==true) {
+        pet = "hamster";
+        petsBackground("pets.png");
+    }
+    else {
+        pet="rat"; 
+        petsBackground("rats.png");
+    }
     alert("Try a " + pet);
-    petsBackground("pets.png");
   }
 
   
   function petAdvice(){
-    var allergic = confirm("Are you allergic to fur? (OK = yes)");
+    let allergic = confirm("Are you allergic to fur? (OK = yes)");
     if (allergic == true) {
-        var cute = confirm("Cute (OK) or Creepy (Cancel)?");
+        let cute = confirm("Cute (OK) or Creepy (Cancel)?");
         if (cute == true) {
 
         }
