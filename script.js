@@ -1,15 +1,18 @@
+var bgImg = "pets.png";
+
 function petRodent(){
-    var pet = "";
-    var cute = confirm("Do you wanna cute pet?");
-    if (cute==true) {
+    let pet = "";
+    let cute = confirm("Do you wanna cute pet?");
+    if (cute == true) {
         pet = "hamster";
-        petsBackground("pets.png");
+        bgImg = "pets.png"
     }
     else {
-        pet="rat"; 
-        petsBackground("rats.png");
+        pet = "rat"; 
+        bgImg = "rats.jpg" 
     }
     alert("Try a " + pet);
+    petsBackground()
   }
 
   
@@ -27,7 +30,8 @@ function petRodent(){
     alert("Get a " + pet +" !")
   }
 
-  function petsBackground(bgImg){
+  function petsBackground(){
+    console.log("Setting background to " + bgImg);
     let wall = document.getElementById("wall");
-    wall.style.background = 'url(bgImg) no-repeat center';
+    wall.style.backgroundImage = "url('"+bgImg+"')";
   }
