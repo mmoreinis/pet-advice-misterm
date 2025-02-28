@@ -4,7 +4,7 @@ function petRodent(){
     if (cute==true) pet="hamster";
     else pet="rat"; 
     alert("Try a " + pet);
-    petsBackground();
+    petsBackground("pets.png");
   }
 
   
@@ -22,7 +22,7 @@ function petRodent(){
     alert("Get a " + pet +" !")
   }
 
-  function petsBackground(){
+  function petsBackground(bgImg){
     let wall = document.getElementById("wall");
-    wall.style.background = 'url("pets.png") no-repeat center';
+    wall.style.background = 'url(bgImg) no-repeat center';
   }
