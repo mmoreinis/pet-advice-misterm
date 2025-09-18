@@ -1,33 +1,30 @@
 var bgImg = "pets.png";
-
-function petRodent(){
-    let pet = "";
-    let cute = confirm("Do you wanna cute pet?");
-    if (cute == true) {
-        pet = "hamster";
-        bgImg = "pets.png"
-    }
-    else {
-        pet = "rat"; 
-        bgImg = "rats.jpg" 
-    }
-    alert("Try a " + pet);
-    petsBackground()
-  }
-
   
   function petAdvice(){
+    let pet = "";  
     let allergic = confirm("Are you allergic to fur? (OK = yes)");
-    if (allergic == true) {
+    if (allergic == false) {
         let cute = confirm("Cute (OK) or Creepy (Cancel)?");
         if (cute == true) {
-
+            pet = "hamster";
+            
+        }
+        else {     // cute == false
+            pet = "rat";
+            bgImg = "rats.jpg" 
         }
     }
-    else {  // allergic = false
-
+    else {  // allergic = true
+        let quiet = confirm("Quiet (OK) or Talkative(Cancel)?");
+        if (quiet == true) {
+        
+        }
+        else {      // quiet == false
+        
+        }
     }
     alert("Get a " + pet +" !")
+    petsBackground()
   }
 
   function petsBackground(){
